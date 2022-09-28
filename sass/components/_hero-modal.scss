@@ -1,0 +1,308 @@
+.hero {
+    padding-top: 200px;
+    padding-bottom: 200px;
+
+    >.hero__container {
+        text-align: center;
+        width: 700px;
+        padding-left: 15px;
+        padding-right: 15px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.bg-hero {
+    max-width: 1600px;
+    min-height: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/Img\(background\).jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-color: $hero-fon;
+}
+
+.hero__slogan {
+    font-size: 44px;
+    font-weight: 900;
+    line-height: 1.36;
+    letter-spacing: 0.06em;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    color: $color-minitext-fon;
+}
+
+.hero__button {
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.87;
+    letter-spacing: 0.06em;
+    border-radius: 4px;
+    padding: 10px 32px;
+    display: inline-block;
+    min-width: 216px;
+    text-align: center;
+    border: 0px;
+    cursor: pointer;
+    color: $color-minitext-fon;
+    background-color: $color-button-text;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+        background-color: $act-button;
+    }
+}
+
+/* Модальное окно */
+
+.backdrop {
+    z-index: 5;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: $overlay-background;
+    opacity: 1;
+    transition: opacity 1400ms linear, visibility 1400ms linear;
+
+    &.is-hidden {
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+    }
+
+    &.is-hidden .modal {
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        transform: translate(-50%, -50%) scale(1) rotate(0deg);
+        transition: opacity 1400ms linear, visibility 1400ms linear;
+    }
+}
+
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 528px;
+    height: 581px;
+    background: $modal-fich;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    transition: transform 500ms ease-in-out;
+    padding: 40px;
+}
+
+.modal__btn {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+
+    background: $modal-fich;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    cursor: pointer;
+
+    >.modal-btn__icon {
+        fill: rgba(0, 0, 0, 1);
+        transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    &:hover .modal-btn__icon,
+    &:focus .modal-btn__icon {
+        fill: $color-button-text;
+    }
+}
+
+/* Модальное окно - форма регистрации */
+
+.register-form__visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+.register-form__heading {
+    display: block;
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 12px;
+    color: $color-text;
+    line-height: calc(23 / 20);
+    letter-spacing: 0.03em;
+}
+
+.register-form__group {
+    margin-bottom: 20px;
+}
+
+.register-form__label {
+    position: relative;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.register-form__label:last-child {
+    margin-bottom: 0;
+}
+
+.register-form__name {
+    display: block;
+    font-size: 12px;
+    margin-bottom: 4px;
+    line-height: calc(14 / 12);
+}
+
+.register-form__input {
+    width: 100%;
+    display: block;
+    height: 40px;
+    padding-left: 42px;
+    padding-right: 42px;
+
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    outline: transparent;
+
+    transition: border-color 400ms;
+
+    &:focus,
+    &:hover {
+        border-color: $color-button-text;
+    }
+
+    &:focus~.register-form__icon,
+    &:hover~.register-form__icon {
+        fill: $color-button-text;
+    }
+}
+
+.register-form__icon {
+    position: absolute;
+    fill: $color-text;
+    top: 50%;
+    left: 10px;
+
+    transition: fill 400ms;
+}
+.register-form__title {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 4px;
+}
+
+.register-form__message {
+    display: block;
+    width: 100%;
+    height: 120px;
+    padding: 18px;
+    font-size: 14px;
+    resize: none;
+    outline: transparent;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+
+    &::placeholder {
+        font-size: 12px;
+    }
+    &:focus,
+    &:hover {
+        border-color: $color-button-text;
+}
+}
+
+.register-form__agreement {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.register-form__icon-checked {
+    opacity: 0;
+    fill: $act-button;
+    transition: opacity 400ms;
+}
+
+.register-form__checkbox:checked+.register-form__agreement-icons .register-form__icon-checked {
+    opacity: 1;
+}
+
+.register-form__icon-unchecked {
+    transition: opacity 400ms;
+}
+
+.register-form__checkbox:checked+.register-form__agreement-icons .register-form__icon-unchecked {
+    opacity: 0;
+}
+
+.register-form__checkbox+.register-form__agreement-icons .register-form__icon-unchecked {
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.register-form__checkbox:focus+.register-form__agreement-icons .register-form__icon-unchecked {
+    opacity: 0;
+}
+
+.register-form__checkbox:focus+.register-form__agreement-icons {
+    border-radius: 2px;
+    border: 2px solid $act-button;
+}
+
+.register-form__checkbox:focus+.register-form__agreement-icons {
+    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.register-form__desc {
+    font-size: 14px;
+    user-select: none;
+}
+
+.register-form__link {
+    color: $color-button-text;
+}
+
+.register-form__btn {
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.87;
+    letter-spacing: 0.06em;
+    border-radius: 4px;
+    padding: 10px 52px;
+    min-width: 200px;
+    min-height: 50px;
+    text-align: center;
+    border: 0px;
+    cursor: pointer;
+    color: $color-minitext-fon;
+    background-color: $color-button-text;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    display: block;
+    margin: 0 auto;
+
+    &:hover,
+    &:focus {
+        background-color: $act-button;
+    }
+}

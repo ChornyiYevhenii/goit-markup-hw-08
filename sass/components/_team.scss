@@ -1,0 +1,100 @@
+.team {
+    text-align: center;
+    background-color: $fon-comand;
+}
+
+.team__title {
+    margin-bottom: 50px;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.16;
+    letter-spacing: 0.03em;
+    text-align: center;
+    color: $color-text;
+}
+
+.team__list {
+    display: flex;
+    gap: 30px;
+}
+
+.team__item {
+    background-color: $color-minitext-fon;
+    border-radius: 4px;
+    width: 270px;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+.team__foto {
+    margin-top: 0;
+}
+
+.team__box {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+}
+
+.team__works-name {
+    margin-bottom: 10px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.18;
+    letter-spacing: 0.03em;
+    color: $color-text;
+}
+
+.team__works-profession {
+    font-size: 16px;
+    line-height: 1.18;
+    letter-spacing: 0.03em;
+    margin-bottom: 16px;
+}
+
+.team__socnet-list {
+    display: flex;
+    justify-content: center;
+}
+
+.team__socnet-item {
+    width: 44px;
+    height: 44px;
+    margin-right: 10px;
+
+    &:last-child {
+        margin-right: 0px;
+    }
+}
+
+.team__socnet-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: $color-minitext-fon;
+    fill: $border-logo;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+        background-color: $color-button-text;
+        color: $color-minitext-fon;
+        cursor: pointer;
+    }
+
+    &:hover .team__socnet-icon,
+    &:focus .team__socnet-icon {
+        fill: $color-minitext-fon;
+    }
+}
+
+.team__socnet-icon {
+    fill: rgb(175, 177, 184);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
