@@ -1,37 +1,63 @@
-.hero {
-    padding-top: 200px;
-    padding-bottom: 200px;
 
-    >.hero__container {
-        text-align: center;
+.hero {
+    padding-top: 118px;
+    padding-bottom: 118px;
+    @media screen and (min-width:1200px) {
+        padding-top: 200px;
+        padding-bottom: 200px;
+    }
+}
+
+.hero__container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width: 360px;
+    @media screen and (min-width:1200px) {
         width: 700px;
-        padding-left: 15px;
-        padding-right: 15px;
-        margin-left: auto;
-        margin-right: auto;
     }
 }
 
 .bg-hero {
-    max-width: 1600px;
-    min-height: 600px;
-    margin-left: auto;
-    margin-right: auto;
-    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/Img\(background\).jpg);
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/mobile/Img-bg-mob.jpg);
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/mobile/Img-bg-mob2x.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     background-color: $hero-fon;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 480px;
+    min-height: 400px;
+    @media screen and (min-width:768px) {
+        max-width: 768px;
+        min-height: 400px;
+        background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/tablet/Img-bg-tabl.jpg);
+        background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/tablet/Img-bg-tabl2x.jpg);
+    }
+
+    @media screen and (min-width:1200px) {
+        max-width: 1600px;
+        min-height: 600px;
+        background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/desktop/Img-bg-dest.jpg);
+        background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/desktop/Img-bg-dest2x.jpg);
+    }
 }
 
 .hero__slogan {
-    font-size: 44px;
+    font-size: 26px;
     font-weight: 900;
-    line-height: 1.36;
+    line-height: 1.6;
     letter-spacing: 0.06em;
     margin-bottom: 30px;
     text-transform: uppercase;
     color: $color-minitext-fon;
+    @media screen and (min-width:1200px) {
+        font-size: 44px;
+        line-height: 1.36;
+    }
 }
 
 .hero__button {
@@ -43,17 +69,20 @@
     border-radius: 4px;
     padding: 10px 32px;
     display: inline-block;
-    min-width: 216px;
+    min-width: 200px;
     text-align: center;
     border: 0px;
     cursor: pointer;
     color: $color-minitext-fon;
     background-color: $color-button-text;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
     &:hover,
     &:focus {
         background-color: $act-button;
+    }
+
+    @media screen and (min-width:1200px) {
+        min-width: 216px;
     }
 }
 
@@ -86,17 +115,22 @@
 }
 
 .modal {
+    z-index: 5;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 528px;
-    height: 581px;
+    width: 450px;
+    height: 609px;
     background: $modal-fich;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
     transition: transform 500ms ease-in-out;
     padding: 40px;
+    @media screen and (min-width:768px) {
+        width: 528px;
+        height: 581px;
+    }
 }
 
 .modal__btn {
@@ -178,13 +212,10 @@
     height: 40px;
     padding-left: 42px;
     padding-right: 42px;
-
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
     outline: transparent;
-
     transition: border-color 400ms;
-
     &:focus,
     &:hover {
         border-color: $color-button-text;
@@ -201,9 +232,9 @@
     fill: $color-text;
     top: 50%;
     left: 10px;
-
     transition: fill 400ms;
 }
+
 .register-form__title {
     display: block;
     font-size: 14px;
@@ -220,14 +251,14 @@
     outline: transparent;
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
-
     &::placeholder {
         font-size: 12px;
     }
-    &:focus,
-    &:hover {
+
+    &:hover,
+    &:focus {
         border-color: $color-button-text;
-}
+    }
 }
 
 .register-form__agreement {
@@ -300,7 +331,6 @@
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     display: block;
     margin: 0 auto;
-
     &:hover,
     &:focus {
         background-color: $act-button;

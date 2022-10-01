@@ -5,47 +5,156 @@
 
 .header__container {
     display: flex;
-    align-items: center;
+
+    @media screen and (min-width:1200px) {
+        display: flex;
+        align-items: center;
+    }
 }
 
 nav {
-    display: flex;
-    justify-content: center;
+    display: none;
+
+    @media screen and (min-width:768px) {
+        display: flex;
+    }
+
+    @media screen and (min-width:1200px) {
+
+        justify-content: center;
+    }
 }
 
 .header__item {
-    margin-right: 50px;
 
-    &:last-child {
-        margin-right: 0;
+    @media screen and (min-width:1200px) {
+        margin-right: 50px;
+
+        &:last-child {
+            margin-right: 0;
+        }
     }
 }
 
 .logo {
     padding-top: 24px;
     padding-bottom: 25px;
-    display: inline-flex;
-    margin-right: 93px;
     font-family: Raleway;
-    font-size: 26px;
+    display: inline-flex;
     font-weight: 700;
     line-height: 1.19;
     letter-spacing: 0.03em;
     color: rgba(0, 0, 0, 1);
     text-decoration: none;
+
+    @media screen and (min-width:1200px) {
+
+
+        margin-right: 93px;
+        font-size: 26px;
+    }
 }
 
 .logo-web {
     color: $color-button-text;
 }
 
-.header__list {
+.menu-button {
+    display: inline-block;
+    margin: 0;
+    margin-left: auto;
+    padding: 0;
+    border: none;
+    color: #212121;
+    background-color: transparent;
+    cursor: pointer;
+    -webkit-transition: fill color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: fill color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+        fill: $color-button-text;
+    }
+
+    @media screen and (min-width:768px) {
+        display: none;
+    }
+
+}
+
+.mobmodal-modal {
+    z-index: 5;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    max-width: 480px;
+    background: $modal-fich;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    transition: transform 500ms ease-in-out;
+    padding: 40px;
+
+    @media screen and (min-width:768px) {
+        display: none;
+    }
+}
+
+.mobmodal-nav {}
+
+.mobmodal-nav__item {
+    color: rgba(33, 33, 33, 1);
+    margin-bottom: 32px;
+
+    &:last-child {
+        margin-bottom: 302px;
+    }
+
+}
+
+.mobmodal-nav__link {
+    font-size: 40px;
+}
+
+.mobmodal-adr {}
+
+.mobmodal-adr__item {
+    margin-bottom: 32px;
+
+    &:last-child {
+        margin-bottom: 64px;
+    }
+}
+
+.mobmodal-adr__link {}
+
+.mobmodal {
     display: flex;
-    flex-direction: row;
+    margin-top: auto;
+
+}
+
+.mobmodal__item {}
+
+.mobmodal__link {}
+
+.mobmodal {}
+
+.mobmodal__item {}
+
+.mobmodal__link {}
+
+
+.header__list {
+
+    @media screen and (min-width:1200px) {
+        display: flex;
+        flex-direction: row;
+    }
 }
 
 .header__link {
-    display: inline-block;
     padding-top: 32px;
     padding-bottom: 32px;
     font-size: 14px;
@@ -59,6 +168,11 @@ nav {
     &:hover,
     &:focus {
         color: $color-button-text;
+    }
+
+    @media screen and (min-width:1200px) {
+        display: inline-block;
+
     }
 }
 
@@ -83,27 +197,36 @@ nav {
         background-color: $color-button-text;
         border-radius: 2px;
     }
+
+    @media screen and (min-width:1200px) {}
 }
 
 .header-contact {
-    margin-left: auto;
-    display: flex;
-    flex-direction: row;
+    display: none;
+
+    @media screen and (min-width:768px) {
+        display: flex;
+    }
+
+    @media screen and (min-width:1200px) {
+        margin-left: auto;
+        flex-direction: row;
+    }
 }
 
 .header-contact__item {
-    margin-right: 50px;
 
-    &:last-child {
-        margin-right: 0;
+    @media screen and (min-width:1200px) {
+        margin-right: 50px;
+
+        &:last-child {
+            margin-right: 0;
+        }
     }
 }
 
 .header-contact__link {
-    display: flex;
-    align-items: center;
-    padding-top: 32px;
-    padding-bottom: 32px;
+
     font-size: 14px;
     font-weight: 500;
     line-height: 1.14;
@@ -120,6 +243,13 @@ nav {
     &:hover .header-contact__icon,
     &:focus .header-contact__icon {
         fill: $color-button-text;
+    }
+
+    @media screen and (min-width:1200px) {
+        display: flex;
+        align-items: center;
+        padding-top: 32px;
+        padding-bottom: 32px;
     }
 }
 

@@ -1,29 +1,35 @@
 .client__title {
-    margin-bottom: 50px;
+    margin-bottom: 30px;
     font-size: 36px;
     font-weight: 700;
     line-height: 1.16;
     letter-spacing: 0.03em;
     text-align: center;
     color: $color-text;
+    @media screen and (min-width:1200px) {
+        margin-bottom: 50px;
+        font-size: 36px;
+    }
 }
 
 .client__list {
     display: flex;
     justify-content: center;
-    margin-top: 50px;
+    flex-wrap: wrap;
+    gap: 30px;
 }
 
 .client__item {
-    width: 170px;
+    width: calc((100% - 2 * 15px) / 2);
     height: 92px;
-    margin-right: 30px;
+    @media screen and (min-width:768px) {
+        width: 226px;
+    }
+    @media screen and (min-width:1200px) {
+        width: 170px;
 
-    &:last-child {
-        margin-right: 0px;
     }
 }
-
 
 .client__link {
     display: flex;
@@ -47,6 +53,7 @@
         fill: $color-button-text;
     }
 }
+
 .client__logo {
     fill: $border-logo;
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);

@@ -3,34 +3,61 @@
     background-color: $fon-comand;
 }
 
+
 .team__title {
-    margin-bottom: 50px;
-    font-size: 36px;
+    margin-bottom: 30px;
+    font-size: 28px;
     font-weight: 700;
-    line-height: 1.16;
+    line-height: 1.17;
     letter-spacing: 0.03em;
     text-align: center;
     color: $color-text;
+    @media screen and (min-width:1200px) {
+        margin-bottom: 50px;
+        font-size: 36px;
+    }
 }
 
 .team__list {
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    justify-content: center;
     display: flex;
-    gap: 30px;
+    flex-wrap: wrap;
+    @media screen and (min-width:768px) {
+        gap: 30px;
+    }
+
+    @media screen and (min-width:1200px) {
+        gap: 30px;
+        flex-wrap: nowrap;
+    }
 }
 
 .team__item {
     background-color: $color-minitext-fon;
     border-radius: 4px;
-    width: 270px;
+    width: 450px;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    margin-bottom: 15px;
+    @media screen and (min-width:768px) {
+        width: 354px;
+    }
 
-    &:last-child {
-        margin-right: 0;
+    @media screen and (min-width:1200px) {
+        margin-bottom: 0;
+        width: 270px;
+        &:last-child {
+            margin-right: 0;
+
+        }
     }
 }
 
 .team__foto {
     margin-top: 0;
+    width: 100%;
 }
 
 .team__box {
@@ -64,7 +91,6 @@
     width: 44px;
     height: 44px;
     margin-right: 10px;
-
     &:last-child {
         margin-right: 0px;
     }
@@ -80,7 +106,6 @@
     background-color: $color-minitext-fon;
     fill: $border-logo;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
     &:hover,
     &:focus {
         background-color: $color-button-text;
