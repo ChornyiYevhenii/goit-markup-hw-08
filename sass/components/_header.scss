@@ -6,7 +6,7 @@
 .header__container {
     display: flex;
 
-    @media screen and (min-width:1200px) {
+    @media screen and (min-width:768px) {
         display: flex;
         align-items: center;
     }
@@ -37,8 +37,9 @@ nav {
 }
 
 .logo {
-    padding-top: 24px;
-    padding-bottom: 25px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    padding-left: 15px;
     font-family: Raleway;
     display: inline-flex;
     font-weight: 700;
@@ -46,10 +47,12 @@ nav {
     letter-spacing: 0.03em;
     color: rgba(0, 0, 0, 1);
     text-decoration: none;
-
+    @media screen and (min-width:768px){
+        margin-right: 88px;
+        padding-top: 26px;
+        padding-bottom: 26px;
+    }
     @media screen and (min-width:1200px) {
-
-
         margin-right: 93px;
         font-size: 26px;
     }
@@ -101,25 +104,64 @@ nav {
     }
 }
 
+    .modal__btnmob {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border: rgba(255, 255, 255, 1);
+    background: $modal-fich;
+    cursor: pointer;
+
+    >.modal-btn__icon {
+        fill: rgba(0, 0, 0, 1);
+        transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    &:hover .modal-btn__icon,
+    &:focus .modal-btn__icon {
+        fill: $color-button-text;
+    }
+}
+
 .mobmodal-nav {}
 
 .mobmodal-nav__item {
-    color: rgba(33, 33, 33, 1);
     margin-bottom: 32px;
-
     &:last-child {
-        margin-bottom: 302px;
-    }
-
+    margin-bottom: 306px;
+}
+    
 }
 
+.mobmodal-nav__link-act {
+    text-decoration: none;
+        color: $color-button-text;
+        font-size: 40px;
+        font-family: 'Roboto';
+        font-style: normal;
+        letter-spacing: 0.02em;
+}
 .mobmodal-nav__link {
+    text-decoration: none;
+    color: rgba(33, 33, 33, 1);
     font-size: 40px;
+    font-family: 'Roboto';
+    font-style: normal;
+    letter-spacing: 0.02em;
+  
 }
 
-.mobmodal-adr {}
+.mobmodal-adr {
+    margin-top: auto;
+}
 
 .mobmodal-adr__item {
+
     margin-bottom: 32px;
 
     &:last-child {
@@ -127,28 +169,77 @@ nav {
     }
 }
 
-.mobmodal-adr__link {}
+.mobmodal-adr__link-tel {
+    text-decoration: none;
+    font-size: 34px;
+    line-height: 1.18;
+    color: rgba(33, 150, 243, 1); 
+    letter-spacing: 0.02em;
+}
+.mobmodal-adr__link {
+    text-decoration: none;
+    font-size: 24px;
+    line-height: 1.16;
+    color: rgba(117, 117, 117, 1);
+    letter-spacing: 0.02em;
+   
+}
 
 .mobmodal {
     display: flex;
     margin-top: auto;
+    margin-bottom: 48px;
+    
 
 }
 
-.mobmodal__item {}
+.mobmodal__item {
+    padding: 0 10px;
+    border-right: 1px solid rgba(33, 33, 33, 0.2);
+    &:last-child {
+        padding-right: 0;
+        border-right: 0;
+        }
+    &:first-child {
+        padding-left: 0;
+    }
+}
 
-.mobmodal__link {}
+.mobmodal__link {
+    color: rgba(33, 150, 243, 1);
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 1.22;
+    letter-spacing: 0.02em;    
+}
 
-.mobmodal {}
+nav {
+    display: none;
 
-.mobmodal__item {}
+    @media screen and (min-width:768px) {
+        display: flex;
+    }
 
-.mobmodal__link {}
+    @media screen and (min-width:1200px) {
 
+        justify-content: center;
+    }
+}
+
+.header__item {
+
+    @media screen and (min-width:768px) {
+        margin-right: 50px;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}
 
 .header__list {
 
-    @media screen and (min-width:1200px) {
+    @media screen and (min-width:768px) {
         display: flex;
         flex-direction: row;
     }
@@ -196,9 +287,12 @@ nav {
         height: 4px;
         background-color: $color-button-text;
         border-radius: 2px;
+        @media screen and (max-width:1199px) {
+                bottom: 5px;
+            }
     }
 
-    @media screen and (min-width:1200px) {}
+
 }
 
 .header-contact {
@@ -206,6 +300,9 @@ nav {
 
     @media screen and (min-width:768px) {
         display: flex;
+        flex-direction: column;
+        margin-left: auto;
+        gap: 10px;
     }
 
     @media screen and (min-width:1200px) {
