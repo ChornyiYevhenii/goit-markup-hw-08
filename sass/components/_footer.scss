@@ -6,11 +6,19 @@
 }
 
 .footer__container {
-    
 @media screen and (min-width:768px) {
+    display: flex;
+    flex-wrap: wrap;
+    
+    justify-content: center;
+}
+@media screen and (min-width:1200px) {
     display: flex;
     align-items: baseline;
 }
+}
+.tur {
+
 }
 .footer__container-addr {
     @media screen and (max-width:767px) {
@@ -19,6 +27,10 @@
     align-items: center;
     margin-bottom: 60px;
     }
+    @media screen and (max-width:1199px) {
+    margin-bottom: 60px;
+    }
+
 }
 
 .footer__logo {
@@ -107,6 +119,10 @@
     align-items: center;
 }
     @media screen and (min-width:768px) {
+    margin-left: 160px;
+    margin-top: 5px;
+    }
+    @media screen and (min-width:1200px) {
     margin-left: 70px;
     }
 }
@@ -171,12 +187,20 @@
 /* ФУТЕР e-mail input (Подписаться) */
 
 .footer__subscribe {
-    margin-left: auto;
-    @media screen and (max-width:767px) {
-            display: flex;
-            flex-direction: column;
-        }
     
+    @media screen and (max-width:767px) {
+    display: flex;
+    flex-direction: column;
+    }
+    @media screen and (max-width:1199px) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    @media screen and (min-width:1200px) {
+    margin-left: auto;
+    }
 }
 
 .footer__subscribe-title {
@@ -194,18 +218,26 @@
 }
 
 .footer__subscribe-form {
+    @media screen and (max-width:1199px) {
     display: flex;
+    align-items: center;
+    flex-direction: column;
+    }
+    @media screen and (min-width:1200px) {
+    display: flex;
+    }
 }
 
 .footer__subscribe-email {
     outline: none;
     width: 358px;
+        width: 450px;
     height: 50px;
     border: 1px solid rgba(255, 255, 255, 0.3);
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
     background: #2f303a;
     border-radius: 4px;
-    margin-right: 12px;
+    margin-bottom: 20px;
     padding-top: 15px;
     padding-left: 16px;
     padding-bottom: 15px;
@@ -215,10 +247,14 @@
     letter-spacing: 0.03em;
     color: rgba(255, 255, 255, 0.6);
     transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
     &:hover,
     &:focus {
         border-color: $act-button;
+    }
+    @media screen and (min-width:1200px) {
+    margin-right: 12px;
+    margin-bottom: 0;
+    width: 358px;
     }
 }
 

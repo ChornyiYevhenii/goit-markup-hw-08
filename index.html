@@ -19,7 +19,6 @@
     <link rel="stylesheet" href="./css/main.min.css" />
     <!-- <link rel="stylesheet" href="./css/styles.css" /> -->
   </head>
-
   <body>
     <!--Шапка сайта-->
     <header class="header">
@@ -217,17 +216,29 @@
         </div>
       </section>
       <section class="team">
-        <div class="container">
+        <div class="container team__container">
           <h3 class="team__title">Наша команда</h3>
           <ul class="team__list">
             <li class="team__item">
-              <img
-                src="./images/desktop/imgw.jpg"
-                class="team__foto"
-                alt="світловолосий чоловік в окулярах та червоній сорочці"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <source
+                  srcset="./images/mobile/com-mob-1.jpg 1x,
+                  ./images/mobile/com-mob-1-2x.jpg 2x"
+                  media="(max-width: 767px)"/>
+                <source
+                  srcset="
+                    ./images/tablet/com-tabl-1.jpg 1x,
+                  ./images/tablet/com-tabl-1-2x.jpg 2x
+                  "
+                  media="(max-width: 1199px)"/>
+                <source
+                  srcset="
+                    ./images/desktop/com-desk-1.jpg 1x,
+                    ./images/desktop/com-desk-1-2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"/>
+                <img src="./images/desktop/com-desk-1.jpg" class="team__foto" alt="світловолосий чоловік в окулярах та червоній сорочці" />
+              </picture>
               <div class="team__box">
                 <h3 class="team__works-name">Ігор Дем'яненко</h3>
                 <p class="team__works-profession" lang="en">Product Designer</p>
@@ -264,13 +275,25 @@
               </div>
             </li>
             <li class="team__item">
-              <img
-                src="./images/desktop/img(1w).jpg"
-                class="team__foto"
-                alt="світловолоса жінка в окулярах та чорному жакеті"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <source
+                  srcset="./images/mobile/com-mob-2.jpg 1x,
+                  ./images/mobile/com-mob-2-2x.jpg 2x"
+                  media="(max-width: 767px)"/>
+                <source
+                  srcset="
+                    ./images/tablet/com-tabl-2.jpg 1x,
+                  ./images/tablet/com-tabl-2-2x.jpg 2x
+                  "
+                  media="(max-width: 1199px)"/>
+                <source
+                  srcset="
+                    ./images/desktop/com-desk-2.jpg 1x,
+                    ./images/desktop/com-desk-2-2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"/>
+                <img src="./images/desktop/com-desk-2.jpg" class="team__foto" alt="світловолоса жінка в окулярах та чорному жакеті" />
+              </picture>
               <div class="team__box">
                 <h3 class="team__works-name">Ольга Рєпіна</h3>
                 <p class="team__works-profession" lang="en">Frontend Developer</p>
@@ -307,7 +330,25 @@
               </div>
             </li>
             <li class="team__item">
-              <img src="./images/desktop/img(2w).jpg" class="team__foto" alt="світловолосий чоловік в білій сорочці" width="270" height="260" />
+              <picture>
+                <source
+                  srcset="./images/mobile/com-mob-3.jpg 1x,
+                  ./images/mobile/com-mob-3-2x.jpg 2x"
+                  media="(max-width: 767px)"/>
+                <source
+                  srcset="
+                    ./images/tablet/com-tabl-3.jpg 1x,
+                  ./images/tablet/com-tabl-3-2x.jpg 2x
+                  "
+                  media="(max-width: 1199px)"/>
+                <source
+                  srcset="
+                    ./images/desktop/com-desk-3.jpg 1x,
+                    ./images/desktop/com-desk-3-2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"/>
+                <img src="./images/desktop/com-desk-3.jpg" class="team__foto" alt="світловолосий чоловік в білій сорочці" />
+              </picture>
               <div class="team__box">
                 <h3 class="team__works-name">Микола Тарасов</h3>
                 <p class="team__works-profession" lang="en">Marketing</p>
@@ -344,13 +385,25 @@
               </div>
             </li>
             <li class="team__item">
-              <img
-                src="./images/desktop/img(3w).jpg"
-                class="team__foto"
-                alt="темноволосий чоловік в окулярах та чорній сорочці"
-                width="270"
-                height="260"
-              />
+              <picture>
+                <source
+                  srcset="./images/mobile/com-mob-4.jpg 1x,
+                  ./images/mobile/com-mob-4-2x.jpg 2x"
+                  media="(max-width: 767px)"/>
+                <source
+                  srcset="
+                    ./images/tablet/com-tabl-4.jpg 1x,
+                  ./images/tablet/com-tabl-4-2x.jpg 2x
+                  "
+                  media="(max-width: 1199px)"/>
+                <source
+                  srcset="
+                    ./images/desktop/com-desk-4.jpg 1x,
+                    ./images/desktop/com-desk-4-2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"/>
+                <img src="./images/desktop/com-desk-4.jpg" class="team__foto" alt="темноволосий чоловік в окулярах та чорній сорочці" />
+              </picture>
               <div class="team__box">
                 <h3 class="team__works-name">Михайло Єрмаков</h3>
                 <p class="team__works-profession" lang="en">UI Designer</p>
