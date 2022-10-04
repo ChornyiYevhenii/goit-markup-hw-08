@@ -103,9 +103,12 @@
     height: 100%;
     background: $overlay-background;
     opacity: 1;
+    padding: 93px 15px;
+    overflow-y: scroll;
     transition: opacity 1400ms linear, visibility 1400ms linear;
 
     &.is-hidden {
+        display: none;
         opacity: 0;
         visibility: hidden;
         pointer-events: none;
@@ -121,29 +124,31 @@
 }
 
 .modal {
-    z-index: 5;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 450px;
-    height: 609px;
     background: $modal-fich;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
     transition: transform 500ms ease-in-out;
     padding: 40px;
+
+    @media screen and (min-width:480px) {
+    width: 450px;
+    z-index: 5;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+
+}
     @media screen and (min-width:1200px) {
-        width: 528px;
-        height: 581px;
-    }
+    width: 528px;
+    height: 581px;
+}
 }
 
 .modal__btn {
     position: absolute;
-    top: 8px;
-    right: 8px;
-
+    top: 100px;
+    right: 24px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -154,6 +159,10 @@
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 50%;
     cursor: pointer;
+    @media screen and (min-width:480px) {
+    top: 8px;
+    right: 8px;
+    }
 
     >.modal-btn__icon {
         fill: rgba(0, 0, 0, 1);
