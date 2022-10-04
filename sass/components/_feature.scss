@@ -1,6 +1,6 @@
-.feature {
-    width: 1200;
-}
+// .feature {
+//     width: 1200;
+// }
 
 .feature__hiden-txt {
     position: absolute;
@@ -25,13 +25,17 @@
     }
 
     @media screen and (min-width:1200px) {
-        display: inline-flex;
+        display: flex;
         flex-wrap: nowrap;
         align-items: stretch;
+        margin: 0;
     }
 }
 
 .feature__item {
+    @media screen and (max-width: 767px) {
+        margin-bottom: 30px;
+    }
     @media screen and (min-width: 768px) {
         width: calc((100% - 2 * 30px) / 2);
         margin: 15px;
@@ -78,6 +82,9 @@
     letter-spacing: 0.03em;
     color: $color-text;
     text-transform: uppercase;
+    @media screen and (max-width: 767px) {
+    text-align: center;
+    }
 }
 
 .feature__txt {

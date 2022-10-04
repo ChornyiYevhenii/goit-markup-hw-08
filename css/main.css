@@ -350,6 +350,11 @@ nav {
 .header__link:hover, .header__link--act:hover, .header__link:focus, .header__link--act:focus {
   color: rgb(33, 150, 243);
 }
+@media screen and (max-width: 1199px) {
+  .header__link, .header__link--act {
+    display: block;
+  }
+}
 @media screen and (min-width: 1200px) {
   .header__link, .header__link--act {
     display: inline-block;
@@ -426,6 +431,14 @@ nav {
 .header-contact__link:hover .header-contact__icon, .header-contact__link:focus .header-contact__icon {
   fill: rgb(33, 150, 243);
 }
+@media screen and (max-width: 1199px) {
+  .header-contact__link.tel {
+    padding-bottom: 20px;
+  }
+  .header-contact__link.mail {
+    padding-top: 20px;
+  }
+}
 @media screen and (min-width: 1200px) {
   .header-contact__link {
     display: -webkit-box;
@@ -463,7 +476,16 @@ nav {
   margin-left: auto;
   margin-right: auto;
   text-align: center;
-  width: 360px;
+}
+@media screen and (max-width: 480px) {
+  .hero__container {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .hero__container {
+    width: 360px;
+  }
 }
 @media screen and (min-width: 1200px) {
   .hero__container {
@@ -841,10 +863,6 @@ nav {
   background-color: rgb(24, 140, 232);
 }
 
-.feature {
-  width: 1200;
-}
-
 .feature__hiden-txt {
   position: absolute;
   width: 1px;
@@ -877,17 +895,23 @@ nav {
 }
 @media screen and (min-width: 1200px) {
   .feature__list {
-    display: -webkit-inline-box;
-    display: -ms-inline-flexbox;
-    display: inline-flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
     -webkit-box-align: stretch;
         -ms-flex-align: stretch;
             align-items: stretch;
+    margin: 0;
   }
 }
 
+@media screen and (max-width: 767px) {
+  .feature__item {
+    margin-bottom: 30px;
+  }
+}
 @media screen and (min-width: 768px) {
   .feature__item {
     width: calc((100% - 60px) / 2);
@@ -944,6 +968,11 @@ nav {
   letter-spacing: 0.03em;
   color: rgb(33, 33, 33);
   text-transform: uppercase;
+}
+@media screen and (max-width: 767px) {
+  .feature__title {
+    text-align: center;
+  }
 }
 
 .feature__txt {
@@ -1071,11 +1100,12 @@ nav {
   width: 450px;
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-  margin-bottom: 15px;
+  margin-bottom: 30px;
 }
 @media screen and (min-width: 768px) {
   .team__item {
     width: 354px;
+    margin-bottom: 0;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -1252,18 +1282,6 @@ nav {
   background-color: rgb(47, 48, 58);
 }
 
-@media screen and (min-width: 768px) {
-  .footer__container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-}
 @media screen and (min-width: 1200px) {
   .footer__container {
     display: -webkit-box;
@@ -1272,6 +1290,33 @@ nav {
     -webkit-box-align: baseline;
         -ms-flex-align: baseline;
             align-items: baseline;
+  }
+}
+
+.footer__container-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 60px;
+}
+@media screen and (min-width: 768px) {
+  .footer__container-info {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .footer__container-info {
+    margin-bottom: 0;
   }
 }
 
@@ -1288,11 +1333,12 @@ nav {
         -ms-flex-align: center;
             align-items: center;
     margin-bottom: 60px;
+    margin-right: auto;
   }
 }
 @media screen and (max-width: 1199px) {
   .footer__container-addr {
-    margin-bottom: 60px;
+    margin-left: auto;
   }
 }
 
@@ -1324,7 +1370,7 @@ nav {
 }
 
 .footer__item {
-  margin-bottom: 9px;
+  margin-bottom: 8px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1335,6 +1381,11 @@ nav {
 }
 .footer__item:last-child {
   margin-bottom: 0;
+}
+@media screen and (min-width: 1200px) {
+  .footer__item {
+    margin-bottom: 9px;
+  }
 }
 
 .footer__map {
@@ -1383,12 +1434,14 @@ nav {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 @media screen and (min-width: 768px) {
   .footer__goin {
-    margin-left: 160px;
-    margin-top: 5px;
+    margin-left: 165px;
+    margin-right: auto;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -1424,11 +1477,6 @@ nav {
   -webkit-box-pack: normal;
       -ms-flex-pack: normal;
           justify-content: normal;
-}
-@media screen and (max-width: 767px) {
-  .footer__soc-list {
-    margin-bottom: 60px;
-  }
 }
 
 .footer__soc-item {
@@ -1523,6 +1571,9 @@ nav {
   }
 }
 
+.footer__subscribe-form {
+  width: 100%;
+}
 @media screen and (max-width: 1199px) {
   .footer__subscribe-form {
     display: -webkit-box;
@@ -1547,8 +1598,6 @@ nav {
 
 .footer__subscribe-email {
   outline: none;
-  width: 358px;
-  width: 450px;
   height: 50px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
@@ -1569,6 +1618,21 @@ nav {
 }
 .footer__subscribe-email:hover, .footer__subscribe-email:focus {
   border-color: rgb(24, 140, 232);
+}
+@media screen and (max-width: 480px) {
+  .footer__subscribe-email {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 481px) {
+  .footer__subscribe-email {
+    width: 450px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .footer__subscribe-email {
+    width: 450px;
+  }
 }
 @media screen and (min-width: 1200px) {
   .footer__subscribe-email {
