@@ -3,21 +3,7 @@
     openModalBtn: document.querySelector('[data-modal-open]'),
     closeModalBtn: document.querySelector('[data-modal-close]'),
     modal: document.querySelector('[data-modal]'),
-  };
-try {
-  refs.openModalBtn.addEventListener('click', toggleModal);
-  refs.closeModalBtn.addEventListener('click', toggleModal);
-} catch (e) {console.log(e)}
-  function toggleModal() {
-    refs.modal.classList.toggle('is-hidden');
-  }
-})();
-
-(() => {
-  const refs = {
-    openModalBtn: document.querySelector('[data-modal-open1]'),
-    closeModalBtn: document.querySelector('[data-modal-close1]'),
-    modal: document.querySelector('[data-modal1]'),
+    bodyPage:document.querySelector('body'),
   };
 
   refs.openModalBtn.addEventListener('click', toggleModal);
@@ -25,5 +11,7 @@ try {
 
   function toggleModal() {
     refs.modal.classList.toggle('is-hidden');
+    refs.bodyPage.classList.toggle('is-blocked');
   }
 })();
+
