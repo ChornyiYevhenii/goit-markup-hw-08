@@ -961,6 +961,9 @@ nav {
   .feature__item {
     margin-bottom: 30px;
   }
+  .feature__item:last-child {
+    margin-bottom: 0;
+  }
 }
 @media screen and (min-width: 768px) {
   .feature__item {
@@ -1256,7 +1259,7 @@ nav {
 
 .client__title {
   margin-bottom: 30px;
-  font-size: 36px;
+  font-size: 28px;
   font-weight: 700;
   line-height: 1.16;
   letter-spacing: 0.03em;
@@ -1865,7 +1868,7 @@ nav {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    height: 441px;
+    height: 100%;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -1877,7 +1880,6 @@ nav {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    height: auto;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
